@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>app</title>
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <div class="task-management">
+      <div class="header">
+        <h1>Task Management System</h1>
+      </div>
+      <div class="inputs">
+        <input type="text" id="task" placeholder="Enter your task" />
+        <label for="start">Start date</label>
+        <input type="datetime-local" id="start" />
+        <label for="end">Deadline</label>
+        <input type="datetime-local" id="end" />
+        <button id="addTask" class="disable">Add Task</button>
+      </div>
+
+      <div class="outputs">
+        <h2>Your Tasks</h2>
+        <div id="sorting">
+          <div>
+            <select name="sort" id="select">
+              <option value="all">All</option>
+              <optgroup label="Sort">
+                <option value="deadline">Nearest Deadline</option>
+              </optgroup>
+              <optgroup label="Filter">
+                <option value="done">Done</option>
+              </optgroup>
+            </select>
+            <button id="sort">Apply</button>
+          </div>
+          <div>
+            <input type="text" id="search" placeholder="search">
+            <button id="searchBtn">Search</button>
+          </div>
+          <div>
+            <button id="deleteAll" >Delete All</button>
+          </div>
+        </div>
+        <div class="myTasks">
+          <ul id="allTasks"></ul>
+        </div>
+      </div>
+    </div>
+    <script src="js/main.js"></script>
+  </body>
+</html>
